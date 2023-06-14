@@ -1,0 +1,134 @@
+/* Add custom styles below this line */
+
+/* Styling for the header */
+header {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    font-size: 18px;
+}
+
+.nav-link {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Styling for the main section */
+.main {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+/* CSS for proper alignment */
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5;
+}
+
+.sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cent>h1 {
+
+    margin-bottom: 30px;
+
+}
+
+ul>li {
+    text-align: left;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.swing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.par {
+    margin-right: 20px;
+    text-align: left;
+}
+
+.par p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Styling for the footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Add custom styles above this line */
+
+
+
+
+
+
+/* main {
+    background-color: grey;
+}
+
+footer {
+    background-color: white;
+}
+
+.cent {
+    background-color: darkgray;
+}
+
+.swing {
+    display: flex;
+}
+
+.main {
+    display: flex;
+
+}
+
+.cent {
+    text-align: center;
+}
+
+.par {
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-left: 10%;
+    text-indent: 2%;
+}
+
+.navbar {
+    justify-content: center;
+    display: flex;
+} */

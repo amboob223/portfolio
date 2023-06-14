@@ -1,0 +1,54 @@
+portfolio   
+    -home
+        -diffrent divs then a table 
+            -first level my pic and then a discription of me 
+                -what is my mission with software development 
+            - my portfolio (use props or react componnrnt )
+                - for each project show the link and a 
+                description of the technology 
+                and features 
+                usefullness
+                                * for all got to make for mobile react native 
+                                to put on google store nd we got to put server
+                                 on render and learn auth and 
+                                solidity to incorporate blockchain in all apps
+
+                    --wocktan -f ( fininh videos)
+                    -poppin -f (add get for pics )
+                    -2key cat -f (add dates, weiht and estimate of price )
+                    -joner -f 
+                    -perfect pitch -f (better design)
+                    -gas getter app - s
+                    -fatherhood app -s
+                    -numerology app -s 
+            -blog
+                -my thought on technology related issues 
+                -my curret propective pojects / inspiration for such
+            -contacts (here we need a form and database )
+                    I can make this one table 
+                        CREATENTANLE work(
+                            name varchar(255),
+                            phone varcharr
+                            message varchar
+                        );
+
+                -want to collab (name,number,type of projrct, )
+                -job -prospects (name of company,website,sm,)
+                - reach out (name ,or ananmoysus leave a message)
+
+
+                send dem papers for lil bra 
+
+                i will do in react for the portflio outer page that will take props from an object wilth each project data in there
+                -this will include a 
+                                    -pic
+                                    -description
+                                    -link
+                                    -use cases
+
+
+- tonight fix the form and flip colors and font and do backend 
+    - make logo for populator and 
+    -start on fatherhood and gas apps and then call reender get server continuosly deployed 
+    - put them in the portfolio then learn auth and then
+     blockchain and react native 
