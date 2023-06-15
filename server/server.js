@@ -8,6 +8,22 @@ app.use(cors())
 app.use(express.json())//json parse 
 
 //post
-app.post("/work", async (req, res){
-    const
+app.post("/work", async (req, res) => {
+    try {
+        const { name, phone, email, message } = req.body;
+        const newData = await pool.query(
+            "INSERT INTO work (name,phone,email,message) VALUES($1,$2,$3,$4) RETURNING *",
+            [name, phone, email, message]
+        );
+        res.json(newData.rows)
+
+        console.log("hhh")
+
+    } catch (error) {
+        console.log(error)
+    }
+});
+
+app.listen(5000, () => {
+    console.log("yiyy")
 })

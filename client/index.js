@@ -8,17 +8,18 @@ const message = document.getElementById("message")
 button.addEventListener("click", async () => {
     try {
 
-        const body = new FormData()
-        body.append("name", namee.value)//this makes an object with all the stuff we will make connect to server 
-        body.append("phone", phone.value)
-        body.append("email", email.value)
-        body.append("message", message.value)
+        const body = {
+            name: namee.value,
+            email: email.value,
+            phone: phone.value,
+            message: message.value
+        }  // because ima make form data not json remove the line below we need to switch to json instead of multipart form data
 
 
         const response = await fetch("http://localhost:5000/work", {
             method: "POST",
-            headers: { "Content-type": "multipart/form-data" },
-            body: body
+            headers: { "Content-type": "Application/json" },
+            body: JSON.stringify(body)
         })
 
         console.log("work")

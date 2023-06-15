@@ -1,4 +1,47 @@
 /* Add custom styles below this line */
+/* Customize the color scheme */
+
+/* Background color */
+body {
+    background-color: #f8f9fa;
+    /* Light gray */
+}
+
+/* Header and navigation */
+.navbar {
+    background-color: #343a40;
+    /* Dark gray */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #fff;
+    /* White text */
+}
+
+/* Main content */
+.main {
+    background-color: #fff;
+    /* White */
+    color: #333;
+    /* Dark gray text */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    /* Dark gray */
+    color: #fff;
+    /* White text */
+}
+
+
+
+
+
+
+
+
 
 /* Styling for the header */
 header {
@@ -35,6 +78,16 @@ header {
 .container {
     width: 800px;
     margin: 0 auto;
+}
+
+.form {
+    justify-content: center;
+    width: 400px;
+}
+
+.outform {
+    display: flex;
+    justify-content: center;
 }
 
 p {
