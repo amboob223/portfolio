@@ -22,6 +22,12 @@ button.addEventListener("click", async () => {
             body: JSON.stringify(body)
         })
 
+        namee.innerHTML = ""
+        email.innerHTML = ""
+        phone.innerHTML = ""
+        message.innerHTML = ""
+
+
         console.log("work")
         alert("you message has been recieved")
     } catch (error) {
