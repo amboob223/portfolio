@@ -2,6 +2,12 @@
 /* Customize the color scheme */
 
 /* Background color */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 body {
     background-color: #f8f9fa;
     /* Light gray */
@@ -31,7 +37,7 @@ body {
 footer {
     background-color: #343a40;
     /* Dark gray */
-    color: #fff;
+
     /* White text */
 }
 
@@ -94,6 +100,7 @@ p {
     text-align: justify;
     text-justify: inter-word;
     line-height: 1.5;
+    text-indent: 2%;
 }
 
 .sub {
@@ -140,6 +147,11 @@ footer {
     padding: 20px;
     text-align: center;
     font-size: 14px;
+}
+
+footer>p {
+    justify-content: center;
+    display: flex;
 }
 
 /* Add custom styles above this line */
