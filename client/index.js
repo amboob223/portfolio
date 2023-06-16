@@ -23,9 +23,9 @@ button.addEventListener("click", async () => {
         })
 
         namee.innerHTML = ""
-        email.innerHTML = ""
-        phone.innerHTML = ""
-        message.innerHTML = ""
+        email.innerText = ""
+        phone.innerText = ""
+        message.innerText = ""
 
 
         console.log("work")
