@@ -5,9 +5,9 @@ const phone = document.getElementById("phone")
 const message = document.getElementById("message")
 
 
-button.addEventListener("click", async () => {
+button.addEventListener("click", async (event) => {
     try {
-
+        event.preventDefault()
         const body = {
             name: namee.value,
             email: email.value,
@@ -21,14 +21,15 @@ button.addEventListener("click", async () => {
             headers: { "Content-type": "Application/json" },
             body: JSON.stringify(body)
         })
-
-        namee.innerHTML = ""
-        email.innerText = ""
-        phone.innerText = ""
-        message.innerText = ""
-
-
         console.log("work")
+
+        namee.value = "",
+            email.value = "",
+            phone.value = "",
+            message.value = ""
+
+
+
         alert("you message has been recieved")
     } catch (error) {
         console.log(error)
