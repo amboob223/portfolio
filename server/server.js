@@ -8,6 +8,12 @@ app.use(cors())
 app.use(express.json())//json parse 
 
 //post
+
+app.get("/", (req, res) => {
+    res.send("Welcome to the portfolio website!");
+});
+
+
 app.post("/work", async (req, res) => {
     try {
         const { name, phone, email, message } = req.body;
