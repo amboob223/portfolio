@@ -4,12 +4,7 @@ const cors = require("cors");
 const pool = require("./db");
 
 //middleware
-app.use(cors(
-    // {
-    //     origin: "https://portfolio-o78g.onrender.com/work"
-    // }
-
-));
+app.use(cors());
 app.use(express.json())//json parse 
 
 //post
@@ -35,6 +30,6 @@ app.post("/work", async (req, res) => {
     }
 });
 
-// app.listen(5000, () => {
-//     console.log("yiyy")
-// })
+app.listen(5000, () => {
+    console.log("yiyy")
+})
