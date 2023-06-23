@@ -4,7 +4,12 @@ const cors = require("cors");
 const pool = require("./db");
 
 //middleware
-app.use(cors())
+app.use(cors(
+    {
+        origin: "https://portfolio-o78g.onrender.com"
+    }
+
+))
 app.use(express.json())//json parse 
 
 //post
