@@ -9,12 +9,12 @@ app.use(express.json())//json parse
 
 //post
 // this is the root  route
-// app.get("/", (req, res) => {
-//     res.send("Welcome to the portfolio website!");
-// });
+app.get("/", (req, res) => {
+    res.send("Welcome to the portfolio website!");
+});
 
 // this is the work route
-app.post("/", async (req, res) => {
+app.post("/work", async (req, res) => {
     try {
         const { name, phone, email, message } = req.body;
         const newData = await pool.query(
