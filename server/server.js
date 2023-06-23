@@ -5,11 +5,11 @@ const pool = require("./db");
 
 //middleware
 app.use(cors(
-    {
-        origin: "https://portfolio-o78g.onrender.com/work"
-    }
+    // {
+    //     origin: "https://portfolio-o78g.onrender.com/work"
+    // }
 
-))
+));
 app.use(express.json())//json parse 
 
 //post
