@@ -10,7 +10,7 @@ app.use(express.json())//json parse
 // post
 // this is the root  route
 app.get("/", (req, res) => {
-    res.send("Welcome to the portfolio website!");
+    res.send("Welcome to the portfeeelio website!");
 });
 
 // this is the work route
