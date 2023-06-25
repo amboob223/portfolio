@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 // this is the work route
-app.post("/work", async (req, res) => {
+app.post("/", async (req, res) => {
     try {
         const { name, phone, email, message } = req.body;
         const newData = await pool.query(
