@@ -28,8 +28,21 @@ app.post("/work", async (req, res) => {
     } catch (error) {
         console.log(error)
         res.status(500).json({ error: "internal server error" })
+    } // you got to do status 500 .json and give it an object with the error property and say internal server errror
+});
+
+
+pool.end((err) => {
+    if (err) {
+        console.error('Error closing connection:', err);
+    } else {
+        console.log('Connection closed successfully.');
     }
 });
+
+
+
+
 
 app.listen(5000, () => {
     console.log("yiyy")
