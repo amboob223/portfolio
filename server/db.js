@@ -7,7 +7,9 @@ const pool = new POOL(
         database: "port_rf7h",
         port: 5432,
         user: "port_rf7h_user",
-        password: "jq5CXXQiLSOmPWqgwMnqhaCYwizz6N4p"
+        password: "jq5CXXQiLSOmPWqgwMnqhaCYwizz6N4p",
+        ssl: true
+
     }
 );
 
