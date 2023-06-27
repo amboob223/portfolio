@@ -117,3 +117,5 @@ wash clothes
  
  150926
  yakisoba noodles
+
+ the server keeps closing because the server postgres and client is two diffrednt versions and that might be causing the issue 
