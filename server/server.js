@@ -21,7 +21,7 @@ app.post("/work", async (req, res) => {
             "INSERT INTO work (name,phone,email,message) VALUES($1,$2,$3,$4) RETURNING *",
             [name, phone, email, message]
         );
-        res.json(newData.rows)
+        res.json(newData.rows[0])
 
         console.log("hhh")
 
