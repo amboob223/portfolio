@@ -119,3 +119,8 @@ wash clothes
  yakisoba noodles
 
  the server keeps closing because the server postgres and client is two diffrednt versions and that might be causing the issue 
+
+ /usr/local/var/postgres15/postgresql.conf
+/usr/local/var/postgresql@15/postgresql.conf
+/usr/local/var/postgres/postgresql.conf
+/Library/PostgreSQL/15/data/postgresql.conf
