@@ -1,51 +1,40 @@
-
-
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
 
-//middleware
 app.use(cors());
-app.use(express.json())//json parse 
+app.use(express.json());
 
-// post
-// this is the root  route
 app.get("/", (req, res) => {
-    res.send("Welcome to the portfeeelio website!");
+  res.send("Welcome to the portfolio website!");
 });
 
-// this is the work route
 app.post("/work", async (req, res) => {
-    try {
-        const { name, phone, email, message } = req.body;
-        const newData = await pool.query(
-            "INSERT INTO work (name,phone,email,message) VALUES($1,$2,$3,$4) RETURNING *",
-            [name, phone, email, message]
-        );
-        res.json(newData.rows)
-
-        console.log("hhh")
-
-    } catch (error) {
-        console.log(error)
-        res.status(500).json({ error: "internal server error" })
-    } // you got to do status 500 .json and give it an object with the error property and say internal server errror
+  try {
+    const { name, phone, email, message } = req.body;
+    const newData = await pool.query(
+      "INSERT INTO work (name,phone,email,message) VALUES($1,$2,$3,$4) RETURNING *",
+      [name, phone, email, message]
+    );
+    res.json(newData.rows[0]);
+    fetchData(); //you can remove all these
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
-
-// pool.end((err) => {
-//     if (err) {
-//         console.error('Error closing connection:', err);
-//     } else {
-//         console.log('Connection closed successfully.');
-//     }
-// });
-
-
-
-
+//test fetch data
+async function fetchData() {
+  try {
+    const result = await pool.query("SELECT * FROM work");
+    console.log(result.rows);
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 app.listen(5000, () => {
-    console.log("yiyy")
-})// this port is for the server
+  console.log("Server is running on port 5000");
+});
