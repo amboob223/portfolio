@@ -24,7 +24,7 @@ app.post("/work", async (req, res) => {
             [name, phone, email, message]
         );
         res.json(newData.rows)
-        fetchData();
+        // fetchData();
         console.log("hhh")
 
     } catch (error) {
@@ -33,12 +33,12 @@ app.post("/work", async (req, res) => {
     } // you got to do status 500 .json and give it an object with the error property and say internal server errror
 });
 
-async function fetchData() {
-    try {
-        const result = await pool.query("SELECT * FROM work");
-        console.log(result.rows);
-    } catch (err) {
-        console.error(err);
-    }
-}
+// async function fetchData() {
+//     try {
+//         const result = await pool.query("SELECT * FROM work");
+//         console.log(result.rows);
+//     } catch (err) {
+//         console.error(err);
+//     }
+// }
 // this port is for the server
