@@ -1,12 +1,9 @@
-
-CREATE DATABASE port;
+CREATE DATABASE portfolio;
 
 CREATE TABLE work(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     phone VARCHAR(255),
     email VARCHAR(255),
-    message VARCHAR(255)
+    message TEXT
 );
-ALTER TABLE work ADD COLUMN id SERIAL PRIMARY KEY;
-ALTER TABLE work ADD COLUMN email VARCHAR(255);
