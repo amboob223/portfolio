@@ -35,4 +35,10 @@ app.post("/work", async (req, res) => {
     } // you got to do status 500 .json and give it an object with the error property and say internal server errror
 });
 
+// Start the server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+});
+
 module.exports = app;
