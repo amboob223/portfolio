@@ -7,14 +7,11 @@ const pool = require("./db");
 
 
 const corsOptions = {
-    origin: "https://abdulmboob.netlify.app/contacts.html",
+    origin: "https://abdulmboob.netlify.app",
 };
 
 //middleware
 app.use(cors(corsOptions));
-
-
-
 app.use(express.json())//json parse 
 
 // post
