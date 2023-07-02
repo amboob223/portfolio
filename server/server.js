@@ -5,8 +5,13 @@ const app = express();
 const cors = require("cors");
 const pool = require("./db");
 
+
+const corsOptions = {
+    origin: "https://abdulmboob.netlify.app",
+};
+
 //middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json())//json parse 
 
 // post
@@ -24,7 +29,7 @@ app.post("/work", async (req, res) => {
             [name, phone, email, message]
         );
         res.json(newData.rows)
-        fetchData()
+
 
         console.log("New data inserted:", newData.rows);
     } catch (error) {
@@ -33,15 +38,15 @@ app.post("/work", async (req, res) => {
     } // you got to do status 500 .json and give it an object with the error property and say internal server errror
 });
 
-async function fetchData() {
-    try {
-        const result = await pool.query("SELECT * FROM work");
-        console.log(result.rows);
+// async function fetchData() {
+//     try {
+//         const result = await pool.query("SELECT * FROM work");
+//         console.log(result.rows);
 
-    } catch (err) {
-        console.error(err);
-    }
-}
+//     } catch (err) {
+//         console.error(err);
+//     }
+// }
 // this port is for the server
 module.exports = app;
 
