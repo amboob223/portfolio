@@ -6,12 +6,9 @@ const cors = require("cors");
 const pool = require("./db");
 
 
-const corsOptions = {
-    origin: "https://abdulmboob.netlify.app",
-};
 
 //middleware
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json())//json parse 
 
 // post
