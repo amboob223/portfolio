@@ -1,0 +1,4 @@
+name: portfolio
+env:
+  - key: ACCESS_CONTROL_ALLOW_ORIGIN
+    value: "https://abdulmboob.netlify.app"
