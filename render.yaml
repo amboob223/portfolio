@@ -1,12 +1,3 @@
-service:
-  - name: portfolio
-    type: web
-    env:
-    
-        value: "https://abdulmboob.netlify.app"
-      - key: DATABASE_URL
-        value: "postgres://port_rf7h_user:jq5CXXQiLSOmPWqgwMnqhaCYwizz6N4p@dpg-ci98a918g3ne2egvnabg-a.ohio-postgres.render.com/port_rf7h"
-
 databases:
   - name: port_rf7h
     plan: postgres
@@ -28,3 +19,12 @@ databases:
         value: 500
       - key: DEFAULT_POOL_SIZE
         value: 50
+
+services:
+  - name: portfolio
+    type: web
+    env:
+    
+        value: "https://abdulmboob.netlify.app"
+      - key: DATABASE_URL
+        value: "postgres://port_rf7h_user:jq5CXXQiLSOmPWqgwMnqhaCYwizz6N4p@dpg-ci98a918g3ne2egvnabg-a.ohio-postgres.render.com/port_rf7h"
