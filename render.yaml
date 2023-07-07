@@ -1,4 +1,4 @@
-database:
+databases:
   - name: port_rf7h
     databaseName: port_rf7h
     user: port_rf7h_user
