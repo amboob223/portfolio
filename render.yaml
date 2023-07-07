@@ -1,4 +1,4 @@
-services:
+service:
   - name: portfolio
     type: web
     env:
