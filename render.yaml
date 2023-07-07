@@ -1,32 +1,24 @@
-services:
-  - name: portfolio
-    type: web
-    env:
-     
-        value: "https://abdulmboob.netlify.app"
-      - key: DATABASE_URL
-        value: "postgres://port_rf7h_user:jq5CXXQiLSOmPWqgwMnqhaCYwizz6N4p@dpg-ci98a918g3ne2egvnabg-a.ohio-postgres.render.com/port_rf7h"
-
-  - name: pgbouncer
-    type: pserv
-    runtime: docker
-    plan: standard
-    repo: https://github.com/render-oss/docker-pgbouncer
-    env:
-      
-        valueFrom:
-          secretKeyRef:
-            name: mysite
-            key: connectionString
-      - key: POOL_MODE
-        value: transaction
-      - key: SERVER_RESET_QUERY
-        value: DISCARD ALL
-      - key: MAX_CLIENT_CONN
-        value: "500"
-      - key: DEFAULT_POOL_SIZE
-        value: "50"
-
 databases:
   - name: port_rf7h
-    plan: postgres
+    databaseName: port_rf7h
+    user: port_rf7h_user
+
+ services:
+ - type: pserv
+   name: pgbouncer
+   runtime: docker
+   plan: standard
+   repo: https://github.com/render-oss/docker-pgbouncer
+   envVars:
+   - key: DATABASE_URL
+     fromDatabase:
+       
+       property: connectionString
+   - key: POOL_MODE
+     value: transaction
+   - key: SERVER_RESET_QUERY
+     value: DISCARD ALL
+   - key: MAX_CLIENT_CONN
+     value: 500
+   - key: DEFAULT_POOL_SIZE
+     value: 50
