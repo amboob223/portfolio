@@ -2,12 +2,12 @@ services:
   - name: portfolio
     type: web
     env:
-      - key: ACCESS_CONTROL_ALLOW_ORIGIN
+    
         value: "https://abdulmboob.netlify.app"
       - key: DATABASE_URL
         value: "postgres://port_rf7h_user:jq5CXXQiLSOmPWqgwMnqhaCYwizz6N4p@dpg-ci98a918g3ne2egvnabg-a.ohio-postgres.render.com/port_rf7h"
 
-database:
+databases:
   - name: port_rf7h
     plan: postgres
 
@@ -19,7 +19,6 @@ database:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
           property: connectionString
       - key: POOL_MODE
         value: transaction
