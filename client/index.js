@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }  // because ima make form data not json remove the line below we need to switch to json instead of multipart form data
 
 
-            const response = await fetch("https://localhost:5000/work", {
+            const response = await fetch("http://localhost:5000/work", {
                 method: "POST",
 
                 body: JSON.stringify(body)
