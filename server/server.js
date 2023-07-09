@@ -41,7 +41,7 @@ const PORT = process.env.PORT || 5000;
 const server = app.listen(5000, () => {
     console.log(`Server listening on port ${PORT}`);
 });
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 120 * 1000;
+// server.keepAliveTimeout = 120 * 1000;
+// server.headersTimeout = 120 * 1000;
 
-module.exports = app;
+// module.exports = app;
