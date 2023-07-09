@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response = await fetch("https://localhost:5000/work", {
                 method: "POST",
-                headers: { "Content-type": "Application/json" },
                 body: JSON.stringify(body)
             })
             console.log("work")
