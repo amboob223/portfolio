@@ -29,3 +29,5 @@ PGPASSWORD=jq5CXXQiLSOmPWqgwMnqhaCYwizz6N4p psql -h dpg-ci98a918g3ne2egvnabg-a.o
     buy black grtoups make diffreent groups and see whicgh 0one takes off the 
     mini chat chat for makes cat bots natural language platform you got to combine with libraryies
     google have dialoge flow they dont have good natural langfuage platfoprm    
+
+    ai in wocktan
