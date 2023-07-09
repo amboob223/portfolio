@@ -39,7 +39,7 @@ app.post("/work", async (req, res) => {
 // const PORT = process.env.PORT || 3000;
 
 app.listen(3001, () => {
-    console.log(`Server listening on port ${PORT}`);
+    console.log(`Server listening on port`);
 });
 // server.keepAliveTimeout = 120 * 1000;
 // server.headersTimeout = 120 * 1000;
