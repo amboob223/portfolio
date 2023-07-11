@@ -2,6 +2,7 @@
 
 const express = require("express");
 const app = express();
+const bodyparser = require("body-parser")
 const cors = require("cors");
 const pool = require("./db");
 // const port = process.env.PORT || 3001;
@@ -9,7 +10,8 @@ const pool = require("./db");
 
 //middleware
 app.use(cors());
-app.use(express.json())//json parse 
+
+app.use(bodyparser.json())//json parse 
 
 // post
 // this is the root  route
