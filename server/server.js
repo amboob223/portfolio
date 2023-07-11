@@ -20,7 +20,7 @@ app.use(bodyparser.json())//json parse
 // });
 
 // this is the work route
-app.post("/work", async (req, res) => {
+app.post("https://portfolio-o78g.onrender.com/work", async (req, res) => {
     try {
         const { name, phone, email, message } = req.body;
         const newData = await pool.query(
